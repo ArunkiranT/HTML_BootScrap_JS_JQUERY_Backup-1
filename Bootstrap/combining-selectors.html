@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Combining Selectors</title>
+    <style>
+      .container {
+      }
+      .container.title {
+        color: red;
+      }
+      .container .title {
+        color: blue;
+      }
+      .title.container {
+        color: yellow;
+      }
+      .container-fluid {
+      }
+      .container-fluid .title {
+      }
+      h1 .title {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Hello World</h1>
+    </div>
+    <div class="container">
+      <h1 class="title container">Hai World-1</h1>
+    </div>
+    <div class="container">
+      <h1 class="container title">Hai World-2</h1>
+    </div>
+    <div class="container">
+      <h1 class="title">Good Bye World</h1>
+    </div>
+  </body>
+</html>
